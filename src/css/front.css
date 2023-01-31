@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.gif {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.header {
+    font-size: 2em;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.text {
+    font-size: 1.5em;
+    margin: 1em 0;
+    text-align: center;
+    width: 60%
+}
+
+.switch {
+    padding: 0.5em 1em;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin: 1em 0;
+}
