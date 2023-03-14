@@ -1,0 +1,114 @@
+$title-color: orange;
+$remove-btn: rgb(181, 100, 119);
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images8.alphacoders.com/379/379102.jpg");
+}
+
+.todoApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-color: rgb(38, 56, 109);
+
+  @media (max-width: 992px) { width: 80%; }
+  @media (max-width: 1200px) { width: 70%; }
+  @media (max-width: 768px) { width: 90%; }
+  @media (max-width: 576px) { width: 100%; }
+  @media (max-height: 667px) { height: 70%; }
+  @media (max-height: 896px) { height: 60%; }
+}
+
+#header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+
+  #title { color: $title-color; }
+  #input {
+    width: 70%;
+    height: 30%;
+    font-size: 30px;
+    color: rgb(6, 103, 155);
+  }
+}
+
+#pencil {
+  width: 20%;
+  height: 70%;
+  position: absolute;
+  margin-left: 70%;
+}
+
+#middle {
+  background-color: $title-color;
+  width: 100%;
+  height: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #hide, #show {
+    color: rgb(207, 167, 5);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(209, 226, 141);
+    font-weight: bold;
+  }
+
+  #hide:hover, #show:hover { background-color: skyblue; }
+}
+
+#footer {
+  max-height: 100%;
+  overflow-y: auto;
+  width: 100%;
+
+  /* Set the width and height of the scrollbar */
+  &::-webkit-scrollbar { width: 8px; height: 8px; }
+
+  /* Set the background color of the scrollbar track */
+  &::-webkit-scrollbar-track { background-color: #f2f2f2; }
+
+  /* Set the color of the scrollbar thumb */
+  &::-webkit-scrollbar-thumb { background-color: #888; }
+
+  /* Set the color of the scrollbar thumb on hover */
+  &::-webkit-scrollbar-thumb:hover { background-color: #555; }
+}
+
+#Tasks{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: rgb(199, 212, 219);
+}
+#task{
+  padding-left: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#removeBtn, #removeAllBtn {
+  border: none;
+  background-color: $remove-btn;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#removeAllBtn { margin: 5px 0 0 5px; }
